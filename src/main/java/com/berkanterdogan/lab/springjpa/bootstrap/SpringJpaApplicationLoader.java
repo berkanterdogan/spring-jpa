@@ -15,12 +15,12 @@ public class SpringJpaApplicationLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        oneToOneExample();
-        oneToManyExample();
-        manyToManyExample();
+        runOneToOneExample();
+        runOneToManyExample();
+        runManyToManyExample();
     }
 
-    private void oneToOneExample() {
+    private void runOneToOneExample() {
         log.info("OneToOneExampleService is running....");
         oneToOneExampleService.deleteAllData();
         oneToOneExampleService.saveData();
@@ -28,14 +28,14 @@ public class SpringJpaApplicationLoader implements CommandLineRunner {
         oneToOneExampleService.queryAppUserDetail();
     }
 
-    private void oneToManyExample() {
+    private void runOneToManyExample() {
         log.info("OneToManyExampleService is running....");
-
+        // TODO @berkanterdogan - implement
     }
 
-    private void manyToManyExample() {
+    private void runManyToManyExample() {
         log.info("ManyToManyExampleService is running....");
-
+        // TODO @berkanterdogan - implement
     }
 
 }

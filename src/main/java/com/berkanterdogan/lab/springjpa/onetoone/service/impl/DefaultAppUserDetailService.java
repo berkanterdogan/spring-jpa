@@ -5,8 +5,8 @@ import com.berkanterdogan.lab.springjpa.onetoone.repository.AppUserDetailReposit
 import com.berkanterdogan.lab.springjpa.onetoone.service.AppUserDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -16,21 +16,19 @@ public class DefaultAppUserDetailService implements AppUserDetailService {
     private final AppUserDetailRepository appUserDetailRepository;
 
     @Override
+    @Transactional
     public void deleteAll() {
         appUserDetailRepository.deleteAll();
     }
 
     @Override
+    @Transactional
     public AppUserDetail save(AppUserDetail appUserDetail) {
         return appUserDetailRepository.save(appUserDetail);
     }
 
     @Override
-    public AppUserDetail findById(Long id) {
-        return appUserDetailRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-    }
-
-    @Override
+    @Transactional(readOnly = true)
     public List<AppUserDetail> findAll() {
         return appUserDetailRepository.findAll();
     }

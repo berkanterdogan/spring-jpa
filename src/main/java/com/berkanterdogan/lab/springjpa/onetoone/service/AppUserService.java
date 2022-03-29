@@ -9,7 +9,5 @@ public interface AppUserService {
 
     AppUser save(AppUser appUser);
 
-    AppUser findById(Long id);
-
     List<AppUser> findAll();
 }

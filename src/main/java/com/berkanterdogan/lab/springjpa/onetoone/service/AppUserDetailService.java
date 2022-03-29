@@ -10,7 +10,5 @@ public interface AppUserDetailService {
 
     AppUserDetail save(AppUserDetail appUserDetail);
 
-    AppUserDetail findById(Long id);
-
     List<AppUserDetail> findAll();
 }
