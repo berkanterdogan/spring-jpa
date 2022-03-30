@@ -20,7 +20,7 @@ public class AppUser {
     private String email;
     private String password;
 
-    @OneToOne(mappedBy = "appUser")
+    @OneToOne(mappedBy = "appUser") // EAGERLY
     private AppUserDetail userDetail;
 
     public static AppUser createWithoutId(String name, String email, String password) {

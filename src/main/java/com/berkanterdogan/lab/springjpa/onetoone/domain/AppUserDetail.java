@@ -28,7 +28,7 @@ public class AppUserDetail {
     private String city;
     private String country;
 
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @OneToOne(optional = false, fetch = FetchType.LAZY) // LAZY
     private AppUser appUser;
 
     public static AppUserDetail createWithoutId(Gender gender, String phoneNumber, String city,

@@ -57,9 +57,9 @@ public class DefaultOneToOneExampleService implements OneToOneExampleService {
     @Override
     @Transactional(readOnly = true)
     public void queryAppUserDetail() {
-        log.info("appUserServiceDetailService.findAll - LAZY - FETCH objects of AppUser LAZY: ");
+        log.info("appUserServiceDetailService.findAll - FETCH objects of AppUser LAZY: ");
         List<AppUserDetail> appUserDetails = userDetailService.findAll();
-        log.info("appUserServiceDetailService.findAll - LAZY - appUserDetails.get(0).getAppUser() is fetching...");
+        log.info("appUserServiceDetailService.findAll - appUserDetails.get(0).getAppUser().getName() is fetching now...");
         appUserDetails.get(0).getAppUser().getName();
     }
 }

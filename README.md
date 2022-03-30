@@ -3,7 +3,7 @@
 This project has some case studies on spring jpa.
 
 - One to One relationships
-- One to Many relationships - TODO
+- One to Many relationships
 - Many to Many relationships - TODO
 
 ## Requirements
