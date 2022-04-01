@@ -1,5 +1,6 @@
 package com.berkanterdogan.lab.springjpa.bootstrap;
 
+import com.berkanterdogan.lab.springjpa.manytomany.service.ManyToManyExampleService;
 import com.berkanterdogan.lab.springjpa.onetomany.service.OneToManyExampleService;
 import com.berkanterdogan.lab.springjpa.onetoone.service.OneToOneExampleService;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ public class SpringJpaApplicationLoader implements CommandLineRunner {
 
     private final OneToOneExampleService oneToOneExampleService;
     private final OneToManyExampleService oneToManyExampleService;
+    private final ManyToManyExampleService manyToManyExampleService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -40,7 +42,10 @@ public class SpringJpaApplicationLoader implements CommandLineRunner {
 
     private void runManyToManyExample() {
         log.info("ManyToManyExampleService is running....");
-        // TODO @berkanterdogan - implement
+        manyToManyExampleService.deleteAllData();
+        manyToManyExampleService.saveData();
+        manyToManyExampleService.queryCourse();
+        manyToManyExampleService.queryStudent();
     }
 
 }

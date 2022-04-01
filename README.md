@@ -4,7 +4,8 @@ This project has some case studies on spring jpa.
 
 - One to One relationships
 - One to Many relationships
-- Many to Many relationships - TODO
+- Many to Many relationships
+- Fetch Lazy/Eager data from Database
 
 ## Requirements
 
