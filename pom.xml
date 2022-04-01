@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.berkanterdogan.lab</groupId>
-    <artifactId>spring-jpa</artifactId>
+    <artifactId>spring-jpa-lab</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-jpa</name>
-    <description>spring-jpa</description>
+    <name>spring-jpa-lab</name>
+    <description>spring-jpa-lab</description>
     <properties>
         <java.version>17</java.version>
     </properties>
